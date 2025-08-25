@@ -14,11 +14,6 @@ Fixed::Fixed() : fpi(0)
 
 Fixed::Fixed(const int i) : fpi(i << fract_bits)
 {
-	this->fpi = i << this->fract_bits;
-	if (i < 0 && this->fpi >= 0)
-		this->fpi = this->fpi | 0x80000000;
-	else if (i >= 0 && this->fpi < 0)
-		this->fpi = this->fpi & 0x7FFFFFFF;
 	std::cout << "Int constructor called\n";
 }
 
