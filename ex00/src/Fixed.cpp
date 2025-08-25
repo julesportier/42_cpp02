@@ -9,7 +9,7 @@ int const Fixed::fract_bits = 8;
 Fixed::Fixed() : fpi(0)
 {
 	std::cout << "Default constructor called\n";
-};
+}
 
 Fixed::Fixed(Fixed const& src)
 {
@@ -27,7 +27,7 @@ Fixed& Fixed::operator=(Fixed const& src)
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called\n";
-};
+}
 
 int Fixed::getRawBits() const
 {
