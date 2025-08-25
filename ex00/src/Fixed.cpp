@@ -11,10 +11,9 @@ Fixed::Fixed() : fpi(0)
 	std::cout << "Default constructor called\n";
 }
 
-Fixed::Fixed(Fixed const& src)
+Fixed::Fixed(Fixed const& src) : fpi(src.getRawBits())
 {
 	std::cout << "Copy constructor called\n";
-	*this = src;
 }
 
 Fixed& Fixed::operator=(Fixed const& src)
