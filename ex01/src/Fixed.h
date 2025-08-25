@@ -1,6 +1,8 @@
 #ifndef FIXED_H
 # define FIXED_H
 
+# include <iostream>
+
 class Fixed {
 public:
 	Fixed();
@@ -9,7 +11,6 @@ public:
 	Fixed(Fixed const& src);
 	Fixed& operator=(Fixed const& src);
 	~Fixed();
-	// float operator<<(Fixed i);
 	int getRawBits() const;
 	void setRawBits(const int raw);
 	float toFloat() const;
@@ -18,5 +19,7 @@ private:
 	int fpi;
 	static int const fract_bits;
 };
+
+std::ostream& operator<<(std::ostream& os, Fixed const& i);
 
 #endif

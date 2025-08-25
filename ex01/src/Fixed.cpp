@@ -61,3 +61,9 @@ float Fixed::toInt() const
 {
 	return (this->fpi >> fract_bits);
 }
+
+std::ostream& operator<<(std::ostream& os, Fixed const& i)
+{
+	os << i.toFloat();
+	return (os);
+}
