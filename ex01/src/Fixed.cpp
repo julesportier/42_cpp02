@@ -60,8 +60,8 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat() const
 {
-	int fract = this->getRawBits() << (sizeof(int) - this->fract_bits);
-	float f = fract >> (sizeof(int) - this->fract_bits);
+	return ((float)this->getRawBits() / (float)(1 << fract_bits));
+}
 	while (f >= 1)
 		f /= 10;
 	f += this->getRawBits() >> this->fract_bits;
