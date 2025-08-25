@@ -20,7 +20,7 @@ Fixed& Fixed::operator=(Fixed const& src)
 {
 	std::cout << "Copy assignement operator called\n";
 	if (this != &src)
-		fpi = src.getRawBits();
+		this->fpi = src.getRawBits();
 	return (*this);
 }
 
