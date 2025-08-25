@@ -22,11 +22,10 @@ Fixed::Fixed(const int i) : fpi(i << fract_bits)
 	std::cout << "Int constructor called\n";
 }
 
-// Fixed::Fixed(const float f)
-// {
-// 	this->fpi = roundf(f);
-// 	std::cout << "Float constructor called\n";
-// }
+Fixed::Fixed(const float f) : fpi(roundf(f * (1 << (fract_bits))))
+{
+	std::cout << "Float constructor called\n";
+}
 
 Fixed::Fixed(Fixed const& src) : fpi(src.getRawBits())
 {
