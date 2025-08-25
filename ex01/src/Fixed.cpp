@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cmath>
 
-int const Fixed::fract_bits = 8;
+const int Fixed::fract_bits = 8;
 
 /******************
  * PUBLIC METHODS *
@@ -22,12 +22,12 @@ Fixed::Fixed(const float f) : fpi(roundf(f * (1 << (fract_bits))))
 	std::cout << "Float constructor called\n";
 }
 
-Fixed::Fixed(Fixed const& src) : fpi(src.getRawBits())
+Fixed::Fixed(const Fixed& src) : fpi(src.getRawBits())
 {
 	std::cout << "Copy constructor called\n";
 }
 
-Fixed& Fixed::operator=(Fixed const& src)
+Fixed& Fixed::operator=(const Fixed& src)
 {
 	std::cout << "Copy assignement operator called\n";
 	if (this != &src)
@@ -46,7 +46,7 @@ int Fixed::getRawBits() const
 	return (this->fpi);
 }
 
-void Fixed::setRawBits(int const raw)
+void Fixed::setRawBits(const int raw)
 {
 	std::cout << "setRawBits member function called\n";
 	this->fpi = raw;
@@ -62,7 +62,7 @@ float Fixed::toInt() const
 	return (this->fpi >> fract_bits);
 }
 
-std::ostream& operator<<(std::ostream& os, Fixed const& i)
+std::ostream& operator<<(std::ostream& os, const Fixed& i)
 {
 	os << i.toFloat();
 	return (os);

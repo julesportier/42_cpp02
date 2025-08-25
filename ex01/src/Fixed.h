@@ -8,8 +8,8 @@ public:
 	Fixed();
 	Fixed(const int i);
 	Fixed(const float f);
-	Fixed(Fixed const& src);
-	Fixed& operator=(Fixed const& src);
+	Fixed(const Fixed& src);
+	Fixed& operator=(const Fixed& src);
 	~Fixed();
 	int getRawBits() const;
 	void setRawBits(const int raw);
@@ -17,9 +17,9 @@ public:
 	float toInt() const;
 private:
 	int fpi;
-	static int const fract_bits;
+	static const int fract_bits;
 };
 
-std::ostream& operator<<(std::ostream& os, Fixed const& i);
+std::ostream& operator<<(std::ostream& os, const Fixed& i);
 
 #endif
