@@ -4,14 +4,14 @@
 class Fixed {
 public:
 	Fixed();
-	Fixed(Fixed const& src);
-	Fixed& operator=(Fixed const& src);
+	Fixed(const Fixed& src);
+	Fixed& operator=(const Fixed& src);
 	~Fixed();
 	int getRawBits() const;
-	void setRawBits(int const raw);
+	void setRawBits(const int raw);
 private:
 	int fpi;
-	static int const fract_bits;
+	static const int fract_bits;
 };
 
 #endif
