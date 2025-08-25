@@ -13,7 +13,7 @@ public:
 	int getRawBits() const;
 	void setRawBits(const int raw);
 	float toFloat() const;
-	// float toInt() const;
+	float toInt() const;
 private:
 	int fpi;
 	static int const fract_bits;

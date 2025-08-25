@@ -62,8 +62,8 @@ float Fixed::toFloat() const
 {
 	return ((float)this->getRawBits() / (float)(1 << fract_bits));
 }
-	while (f >= 1)
-		f /= 10;
-	f += this->getRawBits() >> this->fract_bits;
-	return (f);
+
+float Fixed::toInt() const
+{
+	return (this->fpi >> fract_bits);
 }
