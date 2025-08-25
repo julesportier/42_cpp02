@@ -54,7 +54,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat() const
 {
-	return ((float)this->getRawBits() / (float)(1 << fract_bits));
+	return ((float)this->fpi / (float)(1 << fract_bits));
 }
 
 float Fixed::toInt() const
