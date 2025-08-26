@@ -16,8 +16,8 @@ public:
 	float toFloat() const;
 	float toInt() const;
 private:
-	int fpi;
-	static const int fract_bits;
+	int m_fpi;
+	static const int m_fract_bits;
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& i);
