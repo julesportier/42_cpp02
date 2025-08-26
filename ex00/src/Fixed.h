@@ -10,8 +10,8 @@ public:
 	int getRawBits() const;
 	void setRawBits(const int raw);
 private:
-	int fpi;
-	static const int fract_bits;
+	int m_fpi;
+	static const int m_fract_bits;
 };
 
 #endif
