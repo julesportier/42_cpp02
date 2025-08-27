@@ -116,6 +116,20 @@ Fixed Fixed::operator/(const Fixed& rhs) const
 	return (temp);
 }
 
+Fixed& Fixed::operator++()
+{
+	++m_fpi;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed old = *this;
+	// The funny syntax below is the function call version of `++(*this)`
+	operator++();
+	return (old);
+}
+
 std::ostream& operator<<(std::ostream& os, const Fixed& i)
 {
 	os << i.toFloat();
