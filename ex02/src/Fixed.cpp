@@ -104,6 +104,18 @@ Fixed Fixed::operator-(const Fixed& rhs) const
 	return (temp);
 }
 
+Fixed Fixed::operator*(const Fixed& rhs) const
+{
+	Fixed temp(this->toFloat() * rhs.toFloat());
+	return (temp);
+}
+
+Fixed Fixed::operator/(const Fixed& rhs) const
+{
+	Fixed temp(this->toFloat() / rhs.toFloat());
+	return (temp);
+}
+
 std::ostream& operator<<(std::ostream& os, const Fixed& i)
 {
 	os << i.toFloat();

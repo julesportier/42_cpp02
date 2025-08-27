@@ -23,6 +23,8 @@ public:
 	bool operator!=(const Fixed& rhs) const;
 	Fixed operator+(const Fixed& rhs) const;
 	Fixed operator-(const Fixed& rhs) const;
+	Fixed operator*(const Fixed& rhs) const;
+	Fixed operator/(const Fixed& rhs) const;
 private:
 	int m_fpi;
 	static const int m_fract_bits;
