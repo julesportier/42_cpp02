@@ -33,8 +33,11 @@ int main( void ) {
 	// std::cout << (a / 2) << '\n';
 	// std::cout << (a / b) << '\n';
 	// std::cout << (a / b / c) << '\n';
-	std::cout << ++a << '\n';
-	std::cout << a++ << '\n';
+	// std::cout << ++a << '\n';
+	// std::cout << a++ << '\n';
+	// std::cout << a << '\n';
+	std::cout << --a << '\n';
+	std::cout << a-- << '\n';
 	std::cout << a << '\n';
 	// Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	// std::cout << ++a << std::endl;

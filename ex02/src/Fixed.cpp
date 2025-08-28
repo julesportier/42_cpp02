@@ -130,6 +130,19 @@ Fixed Fixed::operator++(int)
 	return (old);
 }
 
+Fixed& Fixed::operator--()
+{
+	--m_fpi;
+	return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed old = *this;
+	operator--();
+	return (old);
+}
+
 std::ostream& operator<<(std::ostream& os, const Fixed& i)
 {
 	os << i.toFloat();

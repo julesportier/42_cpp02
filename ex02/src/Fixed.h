@@ -27,6 +27,8 @@ public:
 	Fixed operator/(const Fixed& rhs) const;
 	Fixed& operator++();
 	Fixed operator++(int);
+	Fixed& operator--();
+	Fixed operator--(int);
 private:
 	int m_fpi;
 	static const int m_fract_bits;
