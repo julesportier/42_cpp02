@@ -143,6 +143,38 @@ Fixed Fixed::operator--(int)
 	return (old);
 }
 
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed& Fixed::min(const Fixed& a, const Fixed& b)
+{
+	if (a < b)
+		return (const_cast<Fixed&>(a));
+	else
+		return (const_cast<Fixed&>(b));
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+	if (a > b)
+		return (const_cast<Fixed&>(a));
+	else
+		return (const_cast<Fixed&>(b));
+}
+
 std::ostream& operator<<(std::ostream& os, const Fixed& i)
 {
 	os << i.toFloat();

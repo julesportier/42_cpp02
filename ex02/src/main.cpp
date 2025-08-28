@@ -6,7 +6,7 @@ int main( void ) {
 	Fixed a(0.34f);
 	Fixed b(1.91f);
 	Fixed c(0.34f);
-	std::cout << a << '\n';
+	// std::cout << a << '\n';
 	// std::cout << b << '\n';
 	// std::cout << c << '\n';
 	// std::cout << (a < b) << '\n';
@@ -36,9 +36,13 @@ int main( void ) {
 	// std::cout << ++a << '\n';
 	// std::cout << a++ << '\n';
 	// std::cout << a << '\n';
-	std::cout << --a << '\n';
-	std::cout << a-- << '\n';
-	std::cout << a << '\n';
+	// std::cout << --a << '\n';
+	// std::cout << a-- << '\n';
+	// std::cout << a << '\n';
+	std::cout << Fixed::min(a, b) << '\n';
+	std::cout << Fixed::min(b, a) << '\n';
+	std::cout << Fixed::max(a, b) << '\n';
+	std::cout << Fixed::max(b, a) << '\n';
 	// Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	// std::cout << ++a << std::endl;
 	// std::cout << a << std::endl;
